@@ -1,2 +1,2 @@
 # deforestation-detector
-Deforestation Detection using Fire Classification | Internship Project
+Detecting and classifying fire-induced deforestation using satellite data – Internship project
