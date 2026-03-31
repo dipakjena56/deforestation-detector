@@ -4,7 +4,6 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Project-green)
 ![NASA MODIS](https://img.shields.io/badge/Dataset-NASA%20MODIS-yellow)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
@@ -75,9 +74,8 @@ By leveraging **AI and geospatial data**, this project contributes toward early 
 
 Interactive web app built using **Streamlit** — takes user input from MODIS data and predicts fire type instantly.
 
-### Run locally:
-bash
-streamlit run app.py 
+### Check Out:
+link : 
 
 ---
 
