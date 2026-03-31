@@ -75,7 +75,7 @@ By leveraging **AI and geospatial data**, this project contributes toward early 
 Interactive web app built using **Streamlit** — takes user input from MODIS data and predicts fire type instantly.
 
 ### Check Out:
-link : 
+link :  https://fire-classification-system.streamlit.app/
 
 ---
 
