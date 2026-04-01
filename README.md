@@ -1,131 +1,103 @@
-# 🔥 Classification of Fire Types in India Using MODIS Satellite Data (Fire Classification System)
+# 🔥 Fire Classification System
+### Classifying Fire Types Across India Using NASA MODIS Satellite Data
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Project-green)
 ![NASA MODIS](https://img.shields.io/badge/Dataset-NASA%20MODIS-yellow)
 
----
-
-### 🧭 Developed under **AICTE × Shell × Edunet Foundation Virtual Internship Program (2025)**  
-**Project Theme:** *Artificial Intelligence & Machine Learning for Environmental Monitoring*
-
-This project focuses on **detecting and classifying fire incidents across India** — such as *vegetation, volcanic, static land, and offshore fires* — using **NASA MODIS (Moderate Resolution Imaging Spectroradiometer)** satellite data.  
-The workflow covers the entire ML pipeline: **data preprocessing → model training → evaluation → deployment** using **Streamlit**.
+🔗 **Live App:** [fire-classification-system.streamlit.app](https://fire-classification-system.streamlit.app/)
 
 ---
 
-## 🛰️ Overview
+## Overview
 
-This repository demonstrates how satellite-based Earth observation data can be used for **fire type classification and deforestation detection**.  
-By leveraging **AI and geospatial data**, this project contributes toward early detection and monitoring of environmental risks in India.
+This project detects and classifies fire incidents across India — vegetation, volcanic, static land, and offshore fires — using **NASA MODIS satellite data (2021–2023)**. It covers the full ML pipeline from raw data to a deployed Streamlit web app.
 
----
-
-## 📊 Key Highlights
-
-- ✅ Combined MODIS fire data (2021–2023) for India  
-- 🧩 Performed advanced preprocessing: feature engineering, scaling, and outlier handling  
-- ⚖️ Handled class imbalance using **SMOTE**  
-- 🌍 Conducted **spatial visualization** of fire events with **Folium**  
-- 🧠 Built multiple ML models — selected **Random Forest** as the best performer  
-- 💾 Exported model & scaler for deployment  
-- 🚀 Developed an interactive **Streamlit app** for real-time prediction
+Built under the **AICTE × Shell × Edunet Foundation AI/ML Virtual Internship (2025)**.
 
 ---
 
-## ⚙️ Workflow Summary
+## Features
 
-### 🧩 Week 1 – Data Exploration & Visualization
-- Merged multiple MODIS datasets  
-- Checked missing values, duplicates, and data types  
-- Performed EDA using histograms, box plots, and correlation heatmaps  
-- Visualized class distribution of fire types  
-
-### 🧠 Week 2 – Advanced Preprocessing & Spatial Analysis
-- Feature engineering: extracted `year`, `month`, `day_of_week`, `hour` from timestamps  
-- Outlier removal via IQR method  
-- One-Hot Encoding of categorical features  
-- Standard scaling of numerical features  
-- SMOTE applied to balance target classes  
-- Folium map created for interactive fire visualization  
-
-### 🚀 Week 3 – Model Building & Deployment
-- Trained multiple models: Logistic Regression, Decision Tree, Random Forest, KNN  
-- Evaluated using Accuracy, Confusion Matrix, and Classification Report  
-- **Random Forest selected as best performer**  
-- Model and Scaler exported (`.pkl` files)  
-- Streamlit app built for user interaction and prediction  
+- Merges and preprocesses three years of MODIS fire data for India
+- Handles class imbalance using **SMOTE**
+- Interactive fire hotspot map built with **Folium**
+- Compares Logistic Regression, Decision Tree, KNN, and Random Forest
+- **Random Forest** selected as best performer — exported as `.pkl` for deployment
+- Streamlit app for real-time fire type prediction from MODIS inputs
 
 ---
 
-## 🤖 Model Performance
+## ML Pipeline
 
-| Model | Accuracy | Key Features |
-|--------|-----------|---------------|
-| Logistic Regression | Moderate | Baseline linear model |
-| Decision Tree | Good | Handles non-linear data |
-| K-Nearest Neighbors | Average | Sensitive to scaling |
-| **Random Forest** | ⭐ **Best** | Robust, accurate, balanced |
+```
+Raw MODIS Data → EDA → Feature Engineering → Scaling + SMOTE → Model Training → Evaluation → Deployment
+```
 
----
-
-## 🌐 Deployment (Streamlit App)
-
-Interactive web app built using **Streamlit** — takes user input from MODIS data and predicts fire type instantly.
-
-### Check Out:
-link :  https://fire-classification-system.streamlit.app/
+**Feature Engineering** — extracted `year`, `month`, `day_of_week`, `hour` from timestamps; outlier removal via IQR; one-hot encoding of categoricals; standard scaling of numericals.
 
 ---
 
-## 🧠 Technologies Used
+## Model Comparison
 
-| Category                 | Tools / Libraries                       |
-| ------------------------ | --------------------------------------- |
-| **Data Analysis**        | NumPy, Pandas                           |
-| **Visualization**        | Matplotlib, Seaborn, Folium             |
-| **ML & Preprocessing**   | Scikit-learn, XGBoost, Imbalanced-learn |
-| **Statistical Analysis** | Statsmodels, SciPy                      |
-| **Web App Deployment**   | Streamlit                               |
-| **Dataset Source**       | NASA MODIS Satellite Data (2021–2023)   |
+| Model | Performance |
+|---|---|
+| Logistic Regression | Baseline |
+| Decision Tree | Good |
+| K-Nearest Neighbors | Average |
+| **Random Forest** | ⭐ Best |
 
-
----
-
-## 📈 Results & Insights
-
-- Random Forest achieved the highest accuracy and stable predictions  
-- Spatial-temporal trends revealed seasonal fire patterns across India 
-- Integration of temporal + geospatial features improved model precision
-- Interactive Folium maps allowed visual tracking of fire hotspots
+Random Forest delivered the highest accuracy, most stable predictions, and handled class imbalance best after SMOTE.
 
 ---
 
-## 🌱 Future Scope
+## Tech Stack
 
-- Integration with real-time MODIS Fire API feeds  
-- Model explainability using SHAP or LIME 
-- Deployment on cloud platforms (AWS / GCP / Hugging Face Spaces)
-- Enhanced geospatial dashboards for dynamic monitoring
-  
----
-
-## 🙌 Acknowledgements
-
-This project was completed as part of the
-AICTE × Shell × Edunet Foundation Virtual Internship on Artificial Intelligence & Machine Learning (2025)
-
-Special thanks to:
-
-- AICTE – for providing the learning platform
-- Shell & Edunet Foundation – for mentorship and technical guidance
-- NASA MODIS – for open-access satellite fire datasets 
+| Category | Tools |
+|---|---|
+| Data Analysis | NumPy, Pandas |
+| Visualization | Matplotlib, Seaborn, Folium |
+| ML & Preprocessing | Scikit-learn, XGBoost, Imbalanced-learn |
+| Statistical Analysis | Statsmodels, SciPy |
+| Deployment | Streamlit |
+| Dataset | NASA MODIS (2021–2023) |
 
 ---
 
-## 🏁 Conclusion
+## Getting Started
 
-🌍 Leveraging AI and satellite data for environmental sustainability — one pixel at a time.
+```bash
+git clone https://github.com/your-username/fire-classification-system.git
+cd fire-classification-system
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ---
+
+## Key Insights
+
+- Random Forest achieved the highest accuracy with balanced class predictions
+- Spatial-temporal features (month, hour, day) significantly improved precision
+- Seasonal fire patterns are clearly visible across Indian regions in the Folium maps
+
+---
+
+## Future Scope
+
+- Real-time MODIS Fire API integration
+- Model explainability with SHAP / LIME
+- Cloud deployment on AWS / GCP / Hugging Face Spaces
+- Dynamic geospatial dashboard for live monitoring
+
+---
+
+## Acknowledgements
+
+- **AICTE, Shell & Edunet Foundation** — for the internship platform and mentorship
+- **NASA MODIS** — for open-access satellite fire datasets
+
+---
+
+> 🌍 *Leveraging AI and satellite data for environmental sustainability — one pixel at a time.*
